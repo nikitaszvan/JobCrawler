@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 
-from jobspy.model import JobType, Location
-from jobspy.util import get_enum_from_job_type
+from jobcrawler.model import JobType, Location
+from jobcrawler.util import get_enum_from_job_type
 from datetime import datetime, timedelta
 import re
 import pytz
