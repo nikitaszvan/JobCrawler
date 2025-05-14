@@ -6,13 +6,8 @@
 - Aggregates the job postings in a dataframe
 - Proxies support to bypass blocking
 
-![jobspy](https://github.com/cullenwatson/JobSpy/assets/78247585/ec7ef355-05f6-4fd3-8161-a817e31c5c57)
-
 ### Installation
 
-```
-pip install -U python-jobspy
-```
 
 _Python version >= [3.10](https://www.python.org/downloads/release/python-3100/) required_
 
@@ -20,7 +15,7 @@ _Python version >= [3.10](https://www.python.org/downloads/release/python-3100/)
 
 ```python
 import csv
-from jobspy import scrape_jobs
+from jobcrawler import scrape_jobs
 
 jobs = scrape_jobs(
     site_name=["indeed", "linkedin", "zip_recruiter", "glassdoor", "google", "bayt", "naukri"],
@@ -134,10 +129,6 @@ Optional
 
 LinkedIn searches globally & uses only the `location` parameter. 
 
-### **ZipRecruiter**
-
-ZipRecruiter searches for jobs in **US/Canada** & uses only the `location` parameter.
-
 ### **Indeed / Glassdoor**
 
 Indeed & Glassdoor supports most countries, but the `country_indeed` parameter is required. Additionally, use the `location`
@@ -164,48 +155,11 @@ You can specify the following countries when searching on Indeed (use the exact 
 | United Arab Emirates | UK*          | USA*       | Uruguay        |
 | Venezuela            | Vietnam*     |            |                |
 
-### **Bayt**
-
-Bayt only uses the search_term parameter currently and searches internationally
-
-
 
 ## Notes
 * Indeed is the best scraper currently with no rate limiting.  
 * All the job board endpoints are capped at around 1000 jobs on a given search.  
 * LinkedIn is the most restrictive and usually rate limits around the 10th page with one ip. Proxies are a must basically.
-
-## Frequently Asked Questions
-
----
-**Q: Why is Indeed giving unrelated roles?**  
-**A:** Indeed searches the description too.
-
-- use - to remove words
-- "" for exact match
-
-Example of a good Indeed query
-
-```py
-search_term='"engineering intern" software summer (java OR python OR c++) 2025 -tax -marketing'
-```
-
-This searches the description/title and must include software, summer, 2025, one of the languages, engineering intern exactly, no tax, no marketing.
-
----
-
-**Q: No results when using "google"?**  
-**A:** You have to use super specific syntax. Search for google jobs on your browser and then whatever pops up in the google jobs search box after applying some filters is what you need to copy & paste into the google_search_term. 
-
----
-
-**Q: Received a response code 429?**  
-**A:** This indicates that you have been blocked by the job board site for sending too many requests. All of the job board sites are aggressive with blocking. We recommend:
-
-- Wait some time between scrapes (site-dependent).
-- Try using the proxies param to change your IP address.
-
----
 
 ### JobPost Schema
 
@@ -245,11 +199,4 @@ Indeed specific
 ├── company_description
 └── company_logo
 
-Naukri specific
-├── skills
-├── experience_range
-├── company_rating
-├── company_reviews_count
-├── vacancy_count
-└── work_from_home_type
 ```
