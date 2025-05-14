@@ -1,6 +1,6 @@
 import re
 
-from jobspy.util import create_logger
+from jobcrawler.util import create_logger
 
 from datetime import datetime, timedelta, timezone
 import re
