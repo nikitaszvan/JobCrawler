@@ -21,7 +21,7 @@ import csv
 from jobcrawler import scrape_jobs
 
 jobs = scrape_jobs(
-    site_name=["indeed", "linkedin", "zip_recruiter", "glassdoor", "google", "bayt", "naukri"],
+    site_name=["indeed", "linkedin", "glassdoor", "google"],
     search_term="software engineer",
     google_search_term="software engineer jobs near San Francisco, CA since yesterday",
     location="San Francisco, CA",
