@@ -8,6 +8,9 @@
 
 ### Installation
 
+```
+pip install -U python-jobcrawler
+```
 
 _Python version >= [3.10](https://www.python.org/downloads/release/python-3100/) required_
 
