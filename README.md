@@ -1,10 +1,8 @@
-<img src="https://github.com/cullenwatson/JobSpy/assets/78247585/ae185b7e-e444-4712-8bb9-fa97f53e896b" width="400">
-
 **JobSpy** is a job scraping library with the goal of aggregating all the jobs from popular job boards with one tool.
 
 ## Features
 
-- Scrapes job postings from **LinkedIn**, **Indeed**, **Glassdoor**, **Google**, **ZipRecruiter**, **Bayt** & **Naukri** concurrently
+- Scrapes job postings from **LinkedIn**, **Indeed**, **Glassdoor**, **Google** concurrently
 - Aggregates the job postings in a dataframe
 - Proxies support to bypass blocking
 
