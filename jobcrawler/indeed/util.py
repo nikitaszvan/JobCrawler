@@ -1,5 +1,5 @@
-from jobspy.model import CompensationInterval, JobType, Compensation
-from jobspy.util import get_enum_from_job_type
+from jobcrawler.model import CompensationInterval, JobType, Compensation
+from jobcrawler.util import get_enum_from_job_type
 from datetime import datetime, timezone
 
 
