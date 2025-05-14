@@ -1,4 +1,4 @@
-from jobspy.model import Compensation, CompensationInterval, Location, JobType
+from jobcrawler.model import Compensation, CompensationInterval, Location, JobType
 from datetime import datetime, timedelta
 from tzlocal import get_localzone
 import pytz
