@@ -5,15 +5,15 @@ from typing import Tuple
 
 import pandas as pd
 
-from jobspy.bayt import BaytScraper
-from jobspy.glassdoor import Glassdoor
-from jobspy.google import Google
-from jobspy.indeed import Indeed
-from jobspy.linkedin import LinkedIn
-from jobspy.naukri import Naukri
-from jobspy.model import JobType, Location, JobResponse, Country
-from jobspy.model import SalarySource, ScraperInput, Site
-from jobspy.util import (
+from jobcrawler.bayt import BaytScraper
+from jobcrawler.glassdoor import Glassdoor
+from jobcrawler.google import Google
+from jobcrawler.indeed import Indeed
+from jobcrawler.linkedin import LinkedIn
+from jobcrawler.naukri import Naukri
+from jobcrawler.model import JobType, Location, JobResponse, Country
+from jobcrawler.model import SalarySource, ScraperInput, Site
+from jobcrawler.util import (
     set_logger_level,
     extract_salary,
     create_logger,
@@ -22,7 +22,7 @@ from jobspy.util import (
     convert_to_annual,
     desired_order,
 )
-from jobspy.ziprecruiter import ZipRecruiter
+from jobcrawler.ziprecruiter import ZipRecruiter
 
 
 def scrape_jobs(
