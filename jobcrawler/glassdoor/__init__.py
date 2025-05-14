@@ -6,21 +6,21 @@ import requests
 from typing import Tuple
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-from jobspy.glassdoor.constant import fallback_token, query_template, headers
-from jobspy.glassdoor.util import (
+from jobcrawler.glassdoor.constant import fallback_token, query_template, headers
+from jobcrawler.glassdoor.util import (
     get_cursor_for_page,
     parse_compensation,
     parse_location,
     get_midnight_utc_date
 )
-from jobspy.util import (
+from jobcrawler.util import (
     extract_emails_from_text,
     create_logger,
     create_session,
     markdown_converter,
 )
-from jobspy.exception import GlassdoorException
-from jobspy.model import (
+from jobcrawler.exception import GlassdoorException
+from jobcrawler.model import (
     JobPost,
     JobResponse,
     DescriptionFormat,
