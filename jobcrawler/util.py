@@ -11,13 +11,13 @@ import urllib3
 from markdownify import markdownify as md
 from requests.adapters import HTTPAdapter, Retry
 
-from jobspy.model import CompensationInterval, JobType, Site
+from jobcrawler.model import CompensationInterval, JobType, Site
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def create_logger(name: str):
-    logger = logging.getLogger(f"JobSpy:{name}")
+    logger = logging.getLogger(f"JobCrawler:{name}")
     logger.propagate = False
     if not logger.handlers:
         logger.setLevel(logging.INFO)
